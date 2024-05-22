@@ -86,5 +86,11 @@ def E_K(mass,velocity):
    return jsonify({
      "Kinetic Energy":energy
    })
+@app.route('/gravitiational-potential-energy/<mass>/<height>')
+def G_P_E(mass,height):
+   gpe = mass * height * 9.81
+   return jsonify({
+      "Gravitational Potential Energy": gpe
+   })
 if __name__ == '__main__':
   app.run(debug = True)
