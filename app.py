@@ -80,5 +80,11 @@ def multiply(x,y):
    return jsonify({
       "answer": multiple
    })
+@app.route('/kinetic-energy/<mass>/velocity')
+def E_K(mass,velocity):
+   energy = ((velocity ** 2) * mass) / 2
+   return jsonify({
+     "Kinetic Energy":energy
+   })
 if __name__ == '__main__':
   app.run(debug = True)
