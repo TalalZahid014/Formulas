@@ -68,5 +68,11 @@ def power(number,x):
    return jsonify({
       "answer": pwer
    })
+@app.route('/divide/<x>/<y>')
+def divide(x,y):
+   div = x / y
+   return jsonify({
+      "answer": div
+   })
 if __name__ == '__main__':
   app.run(debug = True)
