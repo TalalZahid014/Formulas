@@ -44,6 +44,11 @@ def pythagoras(base,height):
    return jsonify({
       "hypotenuse": hyp
    })
-# @app.route('/')
+@app.route('/cube/<number>')
+def cube(number):
+   cube_value = number ** 3
+   return jsonify({
+      "cube": cube_value
+   })
 if __name__ == '__main__':
   app.run(debug = True)
