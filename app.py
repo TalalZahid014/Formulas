@@ -74,5 +74,11 @@ def divide(x,y):
    return jsonify({
       "answer": div
    })
+@app.route('/multiply/<x>/<y>')
+def multiply(x,y):
+   multiple = x * y
+   return jsonify({
+      "answer": multiple
+   })
 if __name__ == '__main__':
   app.run(debug = True)
