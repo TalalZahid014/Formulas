@@ -62,5 +62,11 @@ def cube_rt(number):
    return jsonify({
       "cube root": crt
    })
+@app.route('/power-x/<number>/<x>')
+def power(number,x):
+   pwer = number ** x
+   return jsonify({
+      "answer": pwer
+   })
 if __name__ == '__main__':
   app.run(debug = True)
