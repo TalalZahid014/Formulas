@@ -92,5 +92,11 @@ def G_P_E(mass,height):
    return jsonify({
       "Gravitational Potential Energy": gpe
    })
+@app.route('/acceleration/<velocity>/<time>')
+def accelaration(velocity,time):
+   acc = velocity / time
+   return jsonify({
+      "acceleration":acc
+   })
 if __name__ == '__main__':
   app.run(debug = True)
