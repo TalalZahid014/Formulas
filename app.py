@@ -50,5 +50,11 @@ def cube(number):
    return jsonify({
       "cube": cube_value
    })
+@app.route('/square-root/<number>')
+def sqrt(number):
+   square_root = math.sqrt(number)
+   return jsonify({
+      "square root": square_root
+   })
 if __name__ == '__main__':
   app.run(debug = True)
