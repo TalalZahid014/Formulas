@@ -104,5 +104,11 @@ def trapezium(a,b,h):
    return jsonify({
       "area": trap
    })
+@app.route('/volume-cylinder/<radius>/<height>')
+def cylinder(radius,height):
+   volume = (((radius ** 2) * height) * math.pi) / 2
+   return jsonify({
+      "volume": volume
+   })
 if __name__ == '__main__':
   app.run(debug = True)
