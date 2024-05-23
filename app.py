@@ -110,5 +110,11 @@ def cone(radius,height):
    return jsonify({
       "volume": volume
    })
+@app.route('/volume-sphere/<radius>')
+def sphere(radius):
+   volume = (4 * math.pi * (radius ** 3)) / 3
+   return jsonify({
+      "volume": volume
+   })
 if __name__ == '__main__':
   app.run(debug = True)
