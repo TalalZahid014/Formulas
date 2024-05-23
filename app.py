@@ -100,9 +100,10 @@ def accelaration(velocity,time):
    })
 @app.route('/area-trapezium/<a>/<b>/<h>')
 def trapezium(a,b,h):
-   trap = ((a + b) * h) / 2
+   trap = ((a + b) * h)
    return jsonify({
       "area": trap
    })
+
 if __name__ == '__main__':
   app.run(debug = True)
